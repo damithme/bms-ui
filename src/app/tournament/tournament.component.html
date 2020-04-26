@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div class="container">
+  <div class="row mt-5">
+    <h2 class="tournament-header">{{matchData[0]['name']}}</h2>
+    <div class="row mt-5">
+      <div *ngFor="let matchData of matchData[0]['rounds']" class="w-100">
+        <mat-card class="round-mat-card">
+          <mat-card-title>
+            <div class="round-header mt-4">Round {{matchData['round']}}</div>
+          </mat-card-title>
+          <mat-card-content>
+            <ng-container *ngFor="let data of matchData['games'];">
+              <mat-card class="mt-5 match-content w-100">
+                <mat-card-title class="pb-3">{{data['gameDate'] | date:'MMM dd'}}</mat-card-title>
+                <mat-card-content class="w-100" style="display: flex">
+                  <mat-chip-list class="w-100" style="display: flex; justify-content: center">
+                    <mat-chip class="" color="primary" selected>
+                      <mat-icon class="win-icon" aria-hidden="false">star</mat-icon>
+                      {{data['winningTeam']['name']}}&nbsp;({{data['winningTeamScore']}})
+                    </mat-chip>
+                    <span class="vs-text">Vs</span>
+                    <mat-chip color="accent" selected>{{data['losingTeam']['name']}}&nbsp;({{data['losingTeamScore']}}
+                      )
+                    </mat-chip>
+                  </mat-chip-list>
+                </mat-card-content>
+              </mat-card>
+            </ng-container>
+          </mat-card-content>
+        </mat-card>
+        <div class="mt-5"></div>
+      </div>
+    </div>
+  </div>
+</div>

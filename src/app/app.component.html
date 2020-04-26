@@ -1,0 +1,13 @@
+<mat-toolbar color="primary" *ngIf="router.url !== '/'">
+  <mat-toolbar-row>
+    <mat-icon class="logo-icon" aria-hidden="false">sports_basketball</mat-icon>
+    <span class="logo-text" (click)="logout()">Basketball Management System</span>
+    <span class="spacer"></span>
+    <button mat-icon-button>
+      <mat-icon (click)="logout()">exit_to_app</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="container-fluid">
+  <router-outlet></router-outlet>
+</div>

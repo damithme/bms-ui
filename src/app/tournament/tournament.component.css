@@ -1,0 +1,46 @@
+.win-icon {
+  color: #ffa929;
+}
+
+.match-date {
+  color: #3f51b5;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.vs-text {
+  font-size: 20px;
+}
+
+.tournament-header {
+  font-size: 34px;
+  color: #3f51b5;
+}
+
+.round-header {
+  font-size: 28px;
+  color: #ff4081;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mat-card {
+  width: 100%;
+}
+
+.round-mat-card {
+  background-color: #f1f1f1;
+}
+
+.match-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.chip {
+  width: 100%;
+  justify-content: space-between;
+}

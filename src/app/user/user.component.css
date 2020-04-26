@@ -1,0 +1,11 @@
+table {
+  width: 100%;
+}
+
+.offline-icon {
+  color: #fd8585;
+}
+
+.online-icon {
+  color: #69b969;
+}

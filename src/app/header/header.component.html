@@ -1,0 +1,45 @@
+<div class="container" *ngIf="router.url !== '/'">
+  <div class="row mt-3">
+    <div class="col">
+
+      <div class="row">
+        <div class="col text-center">
+          <!-- icon start-->
+          <span class="icon-space">
+              <button mat-fab color="primary" (click)="goToDashboard()">
+                <mat-icon>home</mat-icon>
+              </button>
+            </span>
+          <!--icon end--->
+        </div>
+        <div class="col text-center" *ngIf="role === 'player'">
+          <!-- icon start-->
+          <span class="icon-space">
+              <button mat-fab color="accent" (click)="goToPlayerProfile()">
+                <mat-icon>emoji_people</mat-icon>
+              </button>
+            </span>
+          <!--icon end--->
+        </div>
+        <div class="col text-center" *ngIf="role === 'admin' || role === 'coach'">
+          <!-- icon start-->
+          <span class="icon-space">
+              <button mat-fab color="accent" (click)="goToTeams()">
+                <mat-icon>people</mat-icon>
+              </button>
+            </span>
+          <!--icon end--->
+        </div>
+        <div class="col text-center" *ngIf="role === 'admin'">
+          <!-- icon start-->
+          <span class="icon-space">
+              <button mat-fab color="accent" (click)="goToSiteStat()">
+                <mat-icon>assignment</mat-icon>
+              </button>
+            </span>
+          <!--icon end--->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

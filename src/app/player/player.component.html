@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class="container">
+  <div class="Row mt-5">
+    <mat-card>
+      <mat-card-title>
+        <mat-icon aria-hidden="false">account_circle</mat-icon>
+        {{player.user.firstName}} {{player.user.lastName}}
+      </mat-card-title>
+      <mat-card-content>
+        <div class="Row mt-4">
+          <div class="Col">
+            <address>
+              <div class="Row mt-2">
+                <span>First Name:</span><span class="pl-2">{{player.user.firstName}}</span>
+              </div>
+              <div class="Row mt-2">
+                <span>Last Name:</span><span class="pl-2">{{player.user.lastName}}</span>
+              </div>
+              <div class="Row mt-2">
+                <span>Height:</span><span class="pl-2">{{player.height}}</span>
+              </div>
+              <div class="Row mt-2">
+                <span>No of Matches:</span><span class="pl-2">{{player.noOfMatches}}</span>
+              </div>
+              <div class="Row mt-2">
+                <span>Avg Score:</span><span class="pl-2">{{player.playerAvgScore}}</span>
+              </div>
+            </address>
+
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+

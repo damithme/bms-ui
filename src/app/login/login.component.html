@@ -1,0 +1,32 @@
+<div class="card mt-5" style="margin:auto;width: 600px;">
+  <mat-card>
+    <mat-card-title class="login-text">
+      <div class="row text-center">
+        <div class="col">
+          <mat-icon class="login-logo">sports_basketball</mat-icon>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col">
+          &nbsp;<h2>Basketball Management System</h2>
+        </div>
+      </div>
+      <div class="row mt-3"></div>
+    </mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="example-full-width">
+          <mat-label>Username</mat-label>
+          <input matInput placeholder="Username" formControlName="username"
+                 [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" placeholder="Password" formControlName="password"
+                 [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+        </mat-form-field>
+        <button [disabled]="loading" mat-raised-button color="primary">Login</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
